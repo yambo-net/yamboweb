@@ -1,0 +1,441 @@
+@font-face {
+  font-family: 'Adwaita Sans';
+  src: url('/assets/fonts/AdwaitaSans-Regular.ttf');
+}
+
+:root {
+  --text-color: black;
+  --background-color: white;
+  --yambo-red: #de0016;
+  --yambo-blue: #0227bd;
+  --yambo-brown: #d3a55f;
+  --yambo-dark-blue: #0e1985;
+}
+/* --------------- */
+/*  BASE ELEMENTS  */
+/* --------------- */
+html {
+  font-family: 'Adwaita Sans', sans-serif;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+#main-container {
+  width: 100%;
+  padding: 0 1rem;
+}
+a {
+  color: var(--yambo-blue);
+}
+a:not(.active):hover {
+  background-color: var(--yambo-brown);
+}
+a.active {
+  color: var(--yambo-red);
+  font-weight: bold;
+}
+main {
+  width: 100%;
+}
+img {
+  border: 1px solid var(--text-color);
+}
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* --------------- */
+/*    NAVIGATION   */
+/* --------------- */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: inline-block;
+  color: var(--text-color);
+}
+nav ul li a:hover {
+  transform: scale(1, 3);
+  transform-origin: 0 50%;
+}
+
+/* --------------- */
+/*      FOOTER     */
+/* --------------- */
+footer {
+  margin-top: 2rem;
+}
+footer img {
+  border: none;
+  width: 48px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  opacity: 10%;
+}
+
+/* --------------- */
+/*      HOME       */
+/* --------------- */
+main.index {
+  position: relative;
+  height: 300px;
+}
+main.index p {
+  display: inline-block;
+  position: absolute;
+  transform: scale(1.4, 1);
+  transform-origin: 100% 0%;
+  bottom: 0px;
+  right: 1rem;
+  color: white;
+}
+main.index img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------- */
+/*      BLOG       */
+/* --------------- */
+main.blog {
+  display: grid;
+  gap: 1rem;
+}
+main.blog p {
+  margin: 0;
+}
+main.blog h2 {
+  /* Título del post */
+  font-size: 1em;
+  margin: 0;
+  background: var(--yambo-red);
+  color: white;
+  display: inline;
+}
+main.blog article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main.blog article div.post-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+main.blog article div.post-info a {
+  display: inline-block;
+  height: min-content;
+  transform: scale(1, 2);
+  transform-origin: 0% 10%;
+  flex-shrink: 0;
+  color: var(--yambo-blue);
+  text-decoration: none;
+}
+main.blog article div.post-info a::before {
+  content: '[ ';
+}
+main.blog article div.post-info a::after {
+  content: ' -> ]';
+}
+main.blog article > img {
+  /* Header image */
+  height: 7rem;
+  object-fit: cover;
+  width: auto;
+}
+
+/* Contenido del post */
+main.blog article section p {
+  margin-top: 1.5rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+main.blog article section img {
+  width: 100%;
+  height: auto;
+}
+main.blog article section a {
+  display: inline-block;
+  color: var(--yambo-blue);
+}
+main.blog article section a:hover {
+  color: white;
+  transform: scale(2, 1.5);
+  transform-origin: 0% 10%;
+}
+main.blog article section a:hover::before {
+  content: '[ ';
+}
+main.blog article section a:hover::after {
+  content: ' -> ]';
+}
+
+/* --------------- */
+/*     ENLACES     */
+/* --------------- */
+main.enlaces {
+  position: relative;
+}
+main.enlaces img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+}
+main.enlaces ul {
+  margin: 0;
+  padding: 1rem 1rem 3rem 1rem;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+main.enlaces ul li a {
+  display: inline-block;
+  transform: scale(1, 2);
+  transform-origin: 0% 10%;
+  color: white;
+  background-color: var(--yambo-blue);
+}
+main.enlaces ul li a:hover {
+  transform: scale(3, 2);
+}
+main.enlaces ul li:nth-child(1) {
+  margin-left: 10%;
+}
+main.enlaces ul li:nth-child(2) {
+  margin-left: 25%;
+  margin-top: 30px;
+}
+main.enlaces ul li:nth-child(3) {
+  margin-left: 40%;
+  margin-top: 30px;
+}
+main.enlaces ul li:nth-child(4) {
+  margin-left: 55%;
+  margin-top: 30px;
+}
+main.enlaces ul li:nth-child(5) {
+  margin-left: 70%;
+  margin-top: 30px;
+}
+
+/* --------------- */
+/*      MÚSICA     */
+/* --------------- */
+main.musica {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+main.musica p {
+  margin: 0;
+  font-size: 0.8em;
+}
+main.musica section {
+  border: 1px solid var(--text-color);
+  width: 100%;
+  height: min-content;
+}
+main.musica section div {
+  padding: 0.5rem;
+}
+main.musica section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  aspect-ratio: 1 / 1;
+}
+main.musica section h2 {
+  font-size: 1em;
+  margin: 0;
+  background: var(--yambo-red);
+  color: white;
+  display: inline;
+}
+main.musica section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main.musica section ul li a::before {
+  content: '[ ';
+}
+main.musica section ul li a::after {
+  content: ' -> ]';
+}
+main.musica section ul li a {
+  display: inline-block;
+  color: var(--yambo-blue);
+  transform: scale(1.4, 1);
+  transform-origin: 0 0;
+}
+/* --------------- */
+/*      FECHAS     */
+/* --------------- */
+
+main.fechas {
+  padding-bottom: 10rem;
+}
+main.fechas h2 {
+  width: fit-content;
+  background-color: var(--yambo-red);
+  color: white;
+  font-size: 1em;
+}
+main.fechas section.proximas {
+  background-image: url('/assets/pictures/tshirt.png');
+  background-size: 145%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  aspect-ratio: 1 / 1;
+}
+main.fechas section.proximas img {
+  width: 70%;
+  height: auto;
+  border: none;
+  margin-top: 3rem;
+}
+main.fechas section.proximas > div {
+  width: 100%;
+  max-width: 76%;
+}
+main.fechas section.proximas article {
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+main.fechas section.proximas article div {
+  display: flex;
+  justify-content: space-between;
+}
+main.fechas section.proximas article p {
+  margin: 0;
+  flex-shrink: 0;
+}
+main.fechas section.proximas article p.title {
+  text-transform: uppercase;
+}
+main.fechas section.proximas article p.details {
+  font-size: 0.7em;
+  width: full;
+  text-align: right;
+}
+main.fechas section.proximas a {
+  margin-top: 0.5rem;
+  background-color: var(--yambo-blue);
+  color: white;
+  transform: scale(1.5, 1);
+  display: inline-block;
+}
+main.fechas section.anteriores {
+  margin-top: 1rem;
+}
+main.fechas section.anteriores ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main.fechas section.anteriores ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+main.fechas section.anteriores ul li p {
+  margin: 0;
+}
+main.fechas section.anteriores ul li p:first-of-type {
+  color: white;
+  background-color: var(--yambo-brown);
+  transform: scale(3.48, 1);
+  transform-origin: 0%;
+  width: min-content;
+}
+main.fechas div#floating-image-container {
+  display: none;
+  width: 192px;
+  height: auto;
+  position: fixed;
+  pointer-events: none;
+}
+main.fechas div#floating-image-container img {
+  width: 100%;
+  height: auto;
+}
+/* --------------- */
+/*     REGALOS     */
+/* --------------- */
+main.regalos {
+  border: 1px solid var(--text-color);
+  padding: 1rem;
+  text-align: center;
+}
+main.regalos input {
+  width: 256px;
+  padding: 0.25rem;
+  border: 1px solid var(--text-color);
+  background-color: black;
+  color: white;
+}
+main.regalos label {
+  font-weight: bold;
+}
+main.regalos p {
+  font-size: 0.8rem;
+}
+@media (width >= 48rem) {
+  body {
+    justify-content: center;
+  }
+  #main-container {
+    max-width: 640px;
+  }
+  main.index img {
+    object-position: center -200px;
+  }
+  main.index p {
+    transform: scale(2, 1);
+  }
+  main.musica {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  main.fechas section.proximas {
+    background-size: cover;
+    padding-bottom: 2rem;
+    aspect-ratio: 1.2 / 1;
+  }
+  main.fechas section.proximas > div {
+    max-width: 50%;
+  }
+  main.fechas section.proximas img {
+    margin-top: 7rem;
+    width: 256px;
+  }
+  main.fechas section.anteriores ul li {
+    flex-direction: row;
+  }
+}

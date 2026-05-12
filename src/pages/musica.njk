@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: música
+main_class: musica
+order: 2
+---
+{% for release in collections.releases %}
+<section>
+  <img src="/releases/{{release.data.date}}-{{release.fileSlug}}/cover.jpg" alt="" />
+  <div>
+    <h2>{{ release.data.title }}</h2>
+    <p>{{ release.date.getUTCFullYear() }} - {{ release.data.releaseType }}</p>
+    <hr />
+    <ul>
+      {% for link in release.data.links %}
+      <li><a href="{{ link.url }}" rel="noopener" target="_blank">{{ link.title }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endfor %}

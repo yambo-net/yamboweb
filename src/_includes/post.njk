@@ -1,0 +1,17 @@
+---
+layout: base.njk
+main_class: blog
+---
+
+<article>
+    <img src="/posts/{{date}}-{{page.fileSlug}}/main.jpg" alt="" />
+  <div class="post-info">
+    <div>
+      <h2>{{ title }}</h2>
+      <p>{{ page.date | fullDate }}</p>
+    </div>
+  </div>
+  <section class="content">
+  {{ content | safe}}
+  </section>
+</article>
