@@ -1,9 +1,9 @@
 <% require "dotenv"; Dotenv.load(".env") %>
 # Name of your application. Used to uniquely configure containers.
-service: yambo-web-test
+service: yambo-web-test2
 
 # Name of the container image.
-image: ankaph/yambo-web-test
+image: ankaph/yambo-web-test2
 
 # Deploy to these servers.
 servers:
