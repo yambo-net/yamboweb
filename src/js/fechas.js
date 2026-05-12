@@ -11,7 +11,7 @@ async function showImage(imageUrl) {
   if (!attached) {
     attached = true;
 
-    let composedUrl = `/.11ty/image/?src=src/fechas/${imageUrl}/flyer.png&width=865&format=png&via=transform`;
+    let composedUrl = `/assets/flyers/${imageUrl}.png`;
     imageContainer.children[0].src = composedUrl;
     imageContainer.style.display = 'block';
     imageContainer.style.left = event.x + 'px';
