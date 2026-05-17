@@ -5,8 +5,8 @@ main_class: blog
 order: 1
 ---
 {% for post in collections.posts %}
-<article>
-    <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="" />
+<article class="post">
+  <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="" />
   <div class="post-info">
     <div>
       <h2>{{ post.data.title }}</h2>

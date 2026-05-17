@@ -3,5 +3,37 @@ layout: base.njk
 main_class: index
 title: YAMBO
 ---
-<img class="header-img" src="{{ '/assets/pictures/home.jpg' | url }}" alt="" />
-<p>bienvenido a la yamboneta</p>
+<div id="home-image-container">
+  <img class="header-img" src="{{ '/assets/pictures/home.jpg' | url }}" alt="" />
+  <p>bienvenido a la yamboneta</p>
+</div>
+<details open>
+  <summary>¿Qué hay de nuevo?</summary>
+  <section class="proxima-fecha">
+    {% set fecha = collections.fechasFuturas | first %}
+    <h2>Próxima fecha</h2>
+    <article class="fecha">
+      <div>
+        <p>{{ fecha.date | dateWithoutYear }}</p>
+        <p class="title">{{ fecha.data.title }}</p>
+      </div>
+      <p class="details">{{ fecha.data.description }}</p>
+      <a href="{{ fecha.data.link }}" rel="noopener" target="_blank">Más info</a>
+    </article>
+  </section>
+  <section class="ultimo-post">
+    {% set post = collections.posts | last %}
+    <h2>Último post</h2>
+    <article class="post">
+      <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="" />
+      <div class="post-info">
+        <div>
+          <h2>{{ post.data.title }}</h2>
+          <p>{{ post.date | fullDate }}</p>
+        </div>
+        <a href="{{ post.url }}">leer</a>
+      </div>
+    </article>
+  </section>
+
+</details>

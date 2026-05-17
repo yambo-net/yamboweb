@@ -92,10 +92,14 @@ footer img {
 /*      HOME       */
 /* --------------- */
 main.index {
+  display: flex;
+  flex-direction: column;
+}
+main.index div#home-image-container {
   position: relative;
   height: 300px;
 }
-main.index p {
+main.index div#home-image-container p {
   display: inline-block;
   position: absolute;
   transform: scale(1.4, 1);
@@ -104,12 +108,65 @@ main.index p {
   right: 1rem;
   color: white;
 }
-main.index img {
+main.index div#home-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+main.index details {
+  margin-top: 1rem;
+}
+/*main.index details[open]::details-content {
+  border: 1px solid black;
+  padding: 0.5rem;
+}*/
+main.index summary {
+  background-color: var(--yambo-brown);
+  width: fit-content;
+  color: white;
+  transform: scale(2, 1);
+  transform-origin: 0 0;
+  cursor: pointer;
+  margin: 0;
+}
+main.index article.fecha {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+main.index article.fecha div {
+  display: flex;
+  justify-content: space-between;
+}
+main.index article.fecha p {
+  margin: 0;
+}
+main.index article.fecha p.title {
+  text-transform: uppercase;
+}
+main.index article.fecha p.details {
+  font-size: 0.7em;
+  width: full;
+  text-align: right;
+}
+main.index article.fecha a {
+  margin-top: 0.5rem;
+  background-color: var(--yambo-blue);
+  color: white;
+  transform: scale(1.5, 1);
+  display: inline-block;
+}
+main.index section > h2 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  transform: scale(2, 1);
+  transform-origin: 0 0;
+  color: var(--yambo-blue);
+  font-weight: normal;
+  width: fit-content;
+}
 /* --------------- */
 /*      BLOG       */
 /* --------------- */
@@ -117,10 +174,10 @@ main.blog {
   display: grid;
   gap: 1rem;
 }
-main.blog p {
+article.post p {
   margin: 0;
 }
-main.blog h2 {
+article.post h2 {
   /* Título del post */
   font-size: 1em;
   margin: 0;
@@ -128,17 +185,17 @@ main.blog h2 {
   color: white;
   display: inline;
 }
-main.blog article {
+article.post {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main.blog article div.post-info {
+article.post div.post-info {
   display: flex;
   justify-content: space-between;
   margin-top: 0.75rem;
 }
-main.blog article div.post-info a {
+article.post div.post-info a {
   display: inline-block;
   height: min-content;
   transform: scale(1, 2);
@@ -147,13 +204,13 @@ main.blog article div.post-info a {
   color: var(--yambo-blue);
   text-decoration: none;
 }
-main.blog article div.post-info a::before {
+article.post div.post-info a::before {
   content: '[ ';
 }
-main.blog article div.post-info a::after {
+article.post div.post-info a::after {
   content: ' -> ]';
 }
-main.blog article > img {
+article.post > img {
   /* Header image */
   height: 7rem;
   object-fit: cover;
@@ -161,28 +218,28 @@ main.blog article > img {
 }
 
 /* Contenido del post */
-main.blog article section p {
+article.post section p {
   margin-top: 1.5rem;
   text-align: justify;
   line-height: 1.5;
 }
-main.blog article section img {
+article.post section img {
   width: 100%;
   height: auto;
 }
-main.blog article section a {
+article.post section a {
   display: inline-block;
   color: var(--yambo-blue);
 }
-main.blog article section a:hover {
+article.post section a:hover {
   color: white;
   transform: scale(2, 1.5);
   transform-origin: 0% 10%;
 }
-main.blog article section a:hover::before {
+article.post section a:hover::before {
   content: '[ ';
 }
-main.blog article section a:hover::after {
+article.post section a:hover::after {
   content: ' -> ]';
 }
 
@@ -414,10 +471,10 @@ main.regalos p {
   #main-container {
     max-width: 640px;
   }
-  main.index img {
+  main.index div#home-image-container img {
     object-position: center -200px;
   }
-  main.index p {
+  main.index div#home-image-container p {
     transform: scale(2, 1);
   }
   main.musica {
