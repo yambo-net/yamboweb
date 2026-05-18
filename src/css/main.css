@@ -130,7 +130,7 @@ main.index summary {
   margin: 0;
 }
 main.index article.fecha {
-  border: 1px solid #aaa;
+  border: 1px solid black;
   padding: 0.5rem;
   background-color: white;
   color: black;
@@ -273,24 +273,25 @@ main.enlaces ul li a {
 main.enlaces ul li a:hover {
   transform: scale(3, 2);
 }
-main.enlaces ul li:nth-child(1) {
-  margin-left: 10%;
-}
 main.enlaces ul li:nth-child(2) {
-  margin-left: 25%;
-  margin-top: 30px;
+  margin-left: 18%;
+  margin-top: 28px;
 }
 main.enlaces ul li:nth-child(3) {
-  margin-left: 40%;
-  margin-top: 30px;
+  margin-left: 30%;
+  margin-top: 28px;
 }
 main.enlaces ul li:nth-child(4) {
-  margin-left: 55%;
-  margin-top: 30px;
+  margin-left: 45%;
+  margin-top: 28px;
 }
 main.enlaces ul li:nth-child(5) {
-  margin-left: 70%;
-  margin-top: 30px;
+  margin-left: 60%;
+  margin-top: 28px;
+}
+main.enlaces ul li:nth-child(6) {
+  margin-left: 82%;
+  margin-top: 28px;
 }
 
 /* --------------- */
@@ -494,5 +495,23 @@ main.regalos p {
   }
   main.fechas section.anteriores ul li {
     flex-direction: row;
+  }
+  main.enlaces ul li:nth-child(1) {
+    margin-left: 0%;
+  }
+  main.enlaces ul li:nth-child(2) {
+    margin-left: 18%;
+  }
+  main.enlaces ul li:nth-child(3) {
+    margin-left: 32%;
+  }
+  main.enlaces ul li:nth-child(4) {
+    margin-left: 51%;
+  }
+  main.enlaces ul li:nth-child(5) {
+    margin-left: 69%;
+  }
+  main.enlaces ul li:nth-child(6) {
+    margin-left: 89%;
   }
 }
