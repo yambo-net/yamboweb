@@ -4,6 +4,11 @@ title: fechas
 main_class: fechas
 order: 3
 ---
+{% html "head" %}
+{%- for fecha in collections.fechas %}
+<link rel="preload" as="image" href="/assets/flyers/{{fecha.data.date}}-{{fecha.fileSlug}}.png">
+  {% endfor %}
+{% endhtml %}
 <h2>Próximas fechas</h2>
 <section class="proximas">
   <img src="/assets/pictures/yambo.png" alt="">

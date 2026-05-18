@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="{{ '/css/modern-normalize.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
   <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
+  {% getBundle 'html', 'head' %}
 </head>
 <body>
   <div id="main-container">

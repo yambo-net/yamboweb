@@ -66,6 +66,7 @@ module.exports = function (eleventyConfig) {
       .getFilteredByTags('fechas')
       .filter((item) => item.date < new Date());
   });
+  eleventyConfig.addBundle('html');
   return {
     dir: {
       input: 'src',
