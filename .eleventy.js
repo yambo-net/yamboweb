@@ -1,4 +1,5 @@
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
+const { feedPlugin } = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -16,6 +17,24 @@ module.exports = function (eleventyConfig) {
       pictureAttributes: {},
     },
   });
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: 'atom', // or "rss", "json"
+    outputPath: '/feed.xml',
+    collection: {
+      name: 'posts', // iterate over `collections.posts`
+      limit: 0, // 0 means no limit
+    },
+    metadata: {
+      language: 'es',
+      title: 'YAMBO',
+      subtitle: '',
+      base: 'https://yambo.net/',
+      author: {
+        name: 'Yambo',
+      },
+    },
+  });
+
   eleventyConfig.addPassthroughCopy('./src/css/');
   eleventyConfig.addWatchTarget('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/js/');
