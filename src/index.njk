@@ -9,8 +9,9 @@ title: YAMBO
 </div>
 <details open>
   <summary>¿Qué hay de nuevo?</summary>
+  {% set fecha = collections.fechasFuturas | first %}
+  {% if fecha %}
   <section class="proxima-fecha">
-    {% set fecha = collections.fechasFuturas | first %}
     <h2>Próxima fecha</h2>
     <article class="fecha">
       <div>
@@ -21,6 +22,7 @@ title: YAMBO
       <a href="{{ fecha.data.link }}" rel="noopener" target="_blank">Más info</a>
     </article>
   </section>
+  {% endif %}
   <section class="ultimo-post">
     {% set post = collections.posts | last %}
     <h2>Último post</h2>
