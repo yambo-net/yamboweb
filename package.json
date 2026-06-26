@@ -4,8 +4,8 @@
   "description": "Extremely minimal Eleventy starter to kickstart a simple multi-page site / a nearly opinionless foundation to continue building on",
   "main": "index.html",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
