@@ -10,6 +10,10 @@ main_class: blog
       <h2>{{ title }}</h2>
       <p>{{ page.date | fullDate }}</p>
     </div>
+    <div class="author-info">
+      <p>{{ author }}</p>
+      <img class="author-image" src="/assets/pictures/authors/{{authorImage}}.png" alt="" />
+    </div>
   </div>
   <section class="content">
   {{ content | safe}}

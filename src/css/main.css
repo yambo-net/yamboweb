@@ -197,12 +197,14 @@ article.post div.post-info {
 }
 article.post div.post-info a {
   display: inline-block;
+  justify-self: end;
   height: min-content;
   transform: scale(1, 2);
   transform-origin: 0% 10%;
   flex-shrink: 0;
   color: var(--yambo-blue);
   text-decoration: none;
+  margin-left: auto;
 }
 article.post div.post-info a::before {
   content: '[ ';
@@ -216,7 +218,22 @@ article.post > img {
   object-fit: cover;
   width: auto;
 }
-
+article.post div.author-info {
+  display: flex;
+  margin-left: auto;
+}
+article.post img.author-image {
+  border: none;
+  width: auto;
+  height: 37px;
+  margin-right: 0.25rem;
+}
+article.post div.author-info img.author-image {
+  margin-right: 0;
+}
+article.post div.author-info p {
+  align-self: end;
+}
 /* Contenido del post */
 article.post section p {
   margin-top: 1.5rem;
