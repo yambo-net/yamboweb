@@ -150,7 +150,7 @@ main.index article.fecha p.title {
 }
 main.index article.fecha p.details {
   font-size: 0.7em;
-  width: full;
+  width: 100%;
   text-align: right;
 }
 main.index article.fecha a {
@@ -448,7 +448,7 @@ main.fechas section.proximas article p.title {
 }
 main.fechas section.proximas article p.details {
   font-size: 0.7em;
-  width: full;
+  width: 100%;
   text-align: right;
 }
 main.fechas section.proximas a {
