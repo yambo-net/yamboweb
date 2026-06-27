@@ -430,6 +430,10 @@ main.fechas section.proximas > div {
   width: 100%;
   max-width: 76%;
 }
+main.fechas section.proximas > div > p {
+  color: white;
+  text-align: center;
+}
 main.fechas section.proximas article {
   color: white;
   text-align: center;

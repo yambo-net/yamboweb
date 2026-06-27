@@ -13,29 +13,36 @@ order: 3
 <section class="proximas">
   <img src="/assets/pictures/yambo.png" alt="">
   <div>
-    {%- for fecha in collections.fechasFuturas %}
-      <article
-        onpointerenter="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
-        onpointerleave="hideImage()"
-        ontouchstart="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
-        ontouchend="hideImage()"
-        ontouchcancel="hideImage()"
-      >
-        <div>
-          <p>{{ fecha.date | dateWithoutYear }}</p>
-          <p class="title">{{ fecha.data.title }}</p>
-        </div>
-        <p class="details">{{ fecha.data.description }}</p>
-        <a href="{{ fecha.data.link }}" rel="noopener" target="_blank">Más info</a>
-      </article>
-    {%- endfor -%}
+    {% set fecha = collections.fechasFuturas | first %}
+    {% if fecha %}
+      {%- for fecha in collections.fechasFuturas %}
+        <article
+          onmouseenter="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
+          onmouseleave="hideImage()"
+          onclick="toggleImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
+        >
+          <div>
+            <p>{{ fecha.date | dateWithoutYear }}</p>
+            <p class="title">{{ fecha.data.title }}</p>
+          </div>
+          <p class="details">{{ fecha.data.description }}</p>
+          <a href="{{ fecha.data.link }}" rel="noopener" target="_blank">Más info</a>
+        </article>
+      {%- endfor -%}
+    {% else %}
+      <p>(a la calma no más)</p>
+    {% endif %}
   </div>
 </section>
 <h2>Fechas anteriores</h2>
 <section class="anteriores">
   <ul>
   {%- for fecha in collections.fechasPasadas | reverse %}
-    <li onpointerenter="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')" onpointerleave="hideImage()">
+    <li
+      onmouseenter="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
+      onmouseleave="hideImage()"
+      onclick="toggleImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
+    >
       <p>{{ fecha.date | fullDate }}</p>
       <p>{{ fecha.data.title }}</p>
     </li>
