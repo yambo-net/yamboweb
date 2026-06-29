@@ -470,33 +470,33 @@ main.fechas section.anteriores ul {
   margin: 0;
   padding: 0;
 }
-main.fechas section.anteriores ul li {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem 0;
+main.fechas section.anteriores ul#anteriores-desktop {
+  display: none;
+}
+main.fechas section.anteriores ul#anteriores-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+main.fechas section.anteriores ul#anteriores-mobile li {
+  width: 100%;
+}
+main.fechas section.anteriores ul#anteriores-mobile li p {
   margin: 0;
 }
-main.fechas section.anteriores ul li p {
-  margin: 0;
-}
-main.fechas section.anteriores ul li p:first-of-type {
+main.fechas section.anteriores ul#anteriores-mobile li p:first-of-type {
   color: white;
   background-color: var(--yambo-brown);
-  transform: scale(3.48, 1);
+  transform: scale(2.48, 1);
   transform-origin: 0%;
   width: min-content;
 }
+main.fechas section.anteriores ul#anteriores-mobile li img {
+  max-width: 100%;
+  height: auto;
+}
 main.fechas div#floating-image-container {
   display: none;
-  width: 192px;
-  height: auto;
-  position: fixed;
-  pointer-events: none;
-}
-main.fechas div#floating-image-container img {
-  width: 100%;
-  height: auto;
 }
 /* --------------- */
 /*     REGALOS     */
@@ -547,8 +547,38 @@ main.regalos p {
     margin-top: 7rem;
     width: 256px;
   }
-  main.fechas section.anteriores ul li {
+  main.fechas section.anteriores ul#anteriores-mobile {
+    display: none;
+  }
+  main.fechas section.anteriores ul#anteriores-desktop {
+    display: block;
+  }
+  main.fechas section.anteriores ul#anteriores-desktop li {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  main.fechas section.anteriores ul#anteriores-desktop li p {
+    margin: 0;
+  }
+  main.fechas section.anteriores ul#anteriores-desktop li p:first-of-type {
+    color: white;
+    background-color: var(--yambo-brown);
+    transform: scale(3.48, 1);
+    transform-origin: 0%;
+    width: min-content;
+  }
+  main.fechas div#floating-image-container {
+    width: 192px;
+    height: auto;
+    position: fixed;
+    pointer-events: none;
+  }
+  main.fechas div#floating-image-container img {
+    width: 100%;
+    height: auto;
   }
   main.enlaces ul li:nth-child(1) {
     margin-left: 0%;

@@ -36,17 +36,25 @@ order: 3
 </section>
 <h2>Fechas anteriores</h2>
 <section class="anteriores">
-  <ul>
+  <ul id="anteriores-desktop">
   {%- for fecha in collections.fechasPasadas | reverse %}
     <li
       onmouseenter="showImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
       onmouseleave="hideImage()"
-      onclick="toggleImage('{{fecha.data.date}}-{{fecha.fileSlug}}')"
     >
-      <p>{{ fecha.date | fullDate }}</p>
+      <p class="fecha-date">{{ fecha.date | fullDate }}</p>
       <p>{{ fecha.data.title }}</p>
     </li>
   {%- endfor -%}
+  </ul>
+  <ul id="anteriores-mobile">
+    {%- for fecha in collections.fechasPasadas | reverse %}
+    <li>
+      <img src="/assets/flyers/{{fecha.data.date}}-{{fecha.fileSlug}}.png" alt="Flyer de {{ fecha.data.title }}">
+      <p class="fecha-date">{{ fecha.date | fullDate }}</p>
+      <p>{{ fecha.data.title }}</p>
+    </li>
+    {%- endfor -%}
   </ul>
 </section>
 <div id="floating-image-container"><img alt=""></div>
