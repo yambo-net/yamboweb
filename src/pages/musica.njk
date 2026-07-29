@@ -4,7 +4,7 @@ title: música
 main_class: musica
 order: 2
 ---
-{% for release in collections.releases %}
+{% for release in collections.releases | reverse %}
 <section>
   <img src="/releases/{{release.data.date}}-{{release.fileSlug}}/cover.jpg" alt="" />
   <div>
