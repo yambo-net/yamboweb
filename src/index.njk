@@ -4,7 +4,7 @@ main_class: index
 title: YAMBO
 ---
 <div id="home-image-container">
-  <img class="header-img" src="{{ '/assets/pictures/home.jpg' | url }}" alt="" />
+  <img class="header-img" src="{{ '/assets/pictures/home.jpg' | url }}" alt="Imagen de portada, Yambo en una tocata" fetchpriority="high" />
   <p>bienvenido a la yamboneta</p>
 </div>
 <details open>
@@ -27,9 +27,9 @@ title: YAMBO
     {% set post = collections.posts | last %}
     <h2>Último post</h2>
     <article class="post">
-      <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="" />
+      <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="Imagen del post" />
       <div class="post-info">
-        <img class="author-image" src="/assets/pictures/authors/{{post.data.authorImage}}.png" alt="" />
+        <img class="author-image" src="/assets/pictures/authors/{{post.data.authorImage}}.png" alt="Retrato de {{post.data.author}}" />
         <div>
           <h2>{{ post.data.title }}</h2>
           <p>{{ post.date | fullDate }}</p>

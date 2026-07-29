@@ -27,7 +27,7 @@ En volá hasta después se convierte en un espacio de discusión, quién sabe (�
 
 Esperamos que lo disfruten, como nosotros disfrutamos escribir y programar.
 
-<img id="conchetumare-image" src="conchetumare.png" alt="Meme de 'Qué pena tener que matar a un conchetumare'">
+<img id="conchetumare-image" src="conchetumare.png" alt="Meme 'Qué pena tener que matar a un conchetumare'">
 <style>
 img#conchetumare-image {
   display: none;

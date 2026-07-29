@@ -6,7 +6,7 @@ order: 2
 ---
 {% for release in collections.releases | reverse %}
 <section>
-  <img src="/releases/{{release.data.date}}-{{release.fileSlug}}/cover.jpg" alt="" />
+  <img src="/releases/{{release.data.date}}-{{release.fileSlug}}/cover.jpg" alt="Cover art de {{release.data.title}}" />
   <div>
     <h2>{{ release.data.title }}</h2>
     <p>{{ release.date.getUTCFullYear() }} - {{ release.data.releaseType }}</p>

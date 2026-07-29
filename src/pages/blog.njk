@@ -6,9 +6,9 @@ order: 1
 ---
 {% for post in collections.posts %}
 <article class="post">
-  <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="" />
+  <img src="/posts/{{post.data.date}}-{{post.fileSlug}}/main.jpg" alt="IMagen del post" />
   <div class="post-info">
-    <img class="author-image" src="/assets/pictures/authors/{{post.data.authorImage}}.png" alt="" />
+    <img class="author-image" src="/assets/pictures/authors/{{post.data.authorImage}}.png" alt="Retrato de {{post.data.author}}" />
     <div>
       <h2>{{ post.data.title }}</h2>
       <p>{{ post.date | fullDate }}</p>
