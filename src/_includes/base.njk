@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Súbete a la Yamboneta" />
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -21,6 +22,8 @@
     href="{{ '/assets/favicon-16x16.png' | url }}"
   >
   <link rel="preload" href="/assets/fonts/AdwaitaSans-Regular.ttf" as="font" crossorigin="anonymous" />
+  <link rel="preload" as="style" href="{{ '/css/modern-normalize.css' | url }}">
+  <link rel="preload" as="style" href="{{ '/css/main.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/modern-normalize.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
   <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
