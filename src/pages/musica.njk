@@ -10,7 +10,9 @@ order: 2
   <div>
     <h2>{{ release.data.title }}</h2>
     <p>{{ release.date.getUTCFullYear() }} - {{ release.data.releaseType }}</p>
+    {% if release.data.links.length > 0 %}
     <hr />
+    {%- endif %}
     <ul>
       {% for link in release.data.links %}
       <li><a href="{{ link.url }}" rel="noopener" target="_blank">{{ link.title }}</a></li>
