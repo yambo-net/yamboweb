@@ -55,6 +55,17 @@ hr {
   border-bottom: 1px solid var(--text-color);
 }
 
+.iframe-wrapper {
+    position: relative;
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    &:not(:first-child) {
+        margin-top: 1rem;
+    }
+}
+
 /* --------------- */
 /*    NAVIGATION   */
 /* --------------- */
