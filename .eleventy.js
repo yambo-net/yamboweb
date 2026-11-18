@@ -1,7 +1,9 @@
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
 const { feedPlugin } = require('@11ty/eleventy-plugin-rss');
+const texMathPlugin = require('markdown-it-texmath')
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(texMathPlugin));
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     // output image formats
     formats: ['png'],
